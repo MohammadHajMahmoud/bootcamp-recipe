@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    </head>
+    <body>
+        <div class="input-con">
+            <input type="text">
+            <button onclick="getRecipes()">Get Recipes</button>
+        </div>
+        <div class="recipes-container"></div>
+        <script id="recipe-template" type="text/x-handlebars-template">
+            {{#each data}}
+                <div class="player-container">
+                    
+                </div>
+            {{/each}}
+        </script>
+        <script src="./jquery/dist/jquery.min.js"></script>
+        <script src="./handlebars/dist/handlebars.min.js"></script>
+        <script src="renderer.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

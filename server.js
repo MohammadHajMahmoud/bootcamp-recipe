@@ -13,8 +13,14 @@ app.get('/recipes/:ingredient', (req, res) =>{
        if (err) {
            throw err;
        }
-       
-       res.send(data)
+       let recipeData = JSON.parse(data).results
+       let recipeArray = recipeData.map(recipe => {
+        return {title: recipe.title,
+            thumbnail: recipe.thumbnail,
+            image : recipe.image,
+            ingredients : recipe.ingredients
+             }})
+       res.send(recipeArray)
        })
       
    }
@@ -23,11 +29,5 @@ app.get('/recipes/:ingredient', (req, res) =>{
 app.get('/sanity', (req, res) => {
   res.send('ok')
 })
-
-
-
-
-
-
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
