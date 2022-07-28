@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
-    </head>
-    <body>
-        <div class="input-con">
-            <input type="text">
-            <button onclick="getRecipes()">Get Recipes</button>
-        </div>
-        <div class="recipes-container"></div>
-        <script id="recipe-template" type="text/x-handlebars-template">
-            {{#each data}}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="input-con">
+        <input type="text" placeholder="Search for a recipe">
+        <button onclick="getRecipes()">Get Recipes</button>
+    </div>
+    <div class="recipes-container"></div>
+    <script id="recipe-template" type="text/x-handlebars-template">
+        {{#each data}}
                 <div class="recipe-container">
-                    <div><a href="{{link}}">{{title}}</a></div>
-                    <img src="{{thumbnail}}" width="400">
+                    <div class="title"><a href="{{link}}">{{title}}</a></div>
+                    <img class="recipeImage"src="{{thumbnail}}" width="200">
+                    Ingredients : 
                     <ul>
                         {{#each ingredients}}
                         <li>{{this}}</li>
@@ -26,9 +31,10 @@
                 </div>
             {{/each}}
         </script>
-        <script src="./jquery/dist/jquery.min.js"></script>
-        <script src="./handlebars/dist/handlebars.min.js"></script>
-        <script src="renderer.js"></script>
-        <script src="main.js"></script>
-    </body>
+    <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./handlebars/dist/handlebars.min.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>

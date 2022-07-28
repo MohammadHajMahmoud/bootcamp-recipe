@@ -7,6 +7,7 @@ app.use(express.static(path.join(__dirname, 'dist')))
 app.use(express.static(path.join(__dirname, 'node_modules')))
 
 app.get('/recipes/:ingredient', (req, res) =>{
+
      let wantedIngredient = req.params.ingredient
     urllib.request(`https://recipes-goodness.herokuapp.com/recipes/${wantedIngredient}`,
     function (err, data) {
@@ -22,7 +23,6 @@ app.get('/recipes/:ingredient', (req, res) =>{
              }})
        res.send(recipeArray)
        })
-      
    }
  )
 

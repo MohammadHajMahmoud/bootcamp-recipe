@@ -1,10 +1,12 @@
 const renderer = new Renderer();
-const  getRecipes = function (){
-    $(".recipe-container").empty()
+const getRecipes = function () {
+
+    $(".recipes-container").empty()
     const recipeName = $("input").val()
     $.get(`/recipes/${recipeName}`, function (data) {
-        console.log(data)
         renderer.renderRecipe(data)
-
     })
 }
+$(".recipes-container").on("click", ".recipeImage", function () {
+    alert($(this).siblings('ul').children('li').first().text());
+});

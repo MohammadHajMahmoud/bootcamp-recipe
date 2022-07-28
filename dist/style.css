@@ -1,4 +1,5 @@
 .recipes-container {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 16px;
@@ -8,8 +9,8 @@
 .recipe-container {
     padding: 5px;
     background-color: rgb(203, 88, 16);
-    font-family: Orbitron;
-    font-size: 20px; 
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
     font-style: normal;
     font-variant: normal;
     font-weight: 700;
@@ -17,6 +18,56 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    border-radius: 12px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.44);
+}
 
-     
+ul {
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+}
+
+.recipeImage {
+    border-radius: 7px;
+    box-shadow: 9px -1px 5px 4px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: 9px -1px 5px 4px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 9px -1px 5px 4px rgba(0, 0, 0, 0.23);
+}
+
+.input-con {
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    font-size: 21px;
+    width: 80%;
+}
+
+body {
+    background-color: azure;
+}
+
+.title {
+    margin-bottom: 5px;
+}
+button{
+    
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: #4299e1;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    line-height: 26px;
+
 }
