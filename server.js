@@ -17,7 +17,7 @@ app.get('/recipes/:ingredient', (req, res) =>{
        let recipeArray = recipeData.map(recipe => {
         return {title: recipe.title,
             thumbnail: recipe.thumbnail,
-            image : recipe.image,
+            link : recipe.href,
             ingredients : recipe.ingredients
              }})
        res.send(recipeArray)
